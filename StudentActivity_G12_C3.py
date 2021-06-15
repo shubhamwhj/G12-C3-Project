@@ -8,20 +8,19 @@ Created on Thu Jun 10 18:26:20 2021
 import pygame,sys
 
 #initialising pygame and its functions 
-pygame.init()
-
+-----------------
 # creating game window and title
 screen = pygame.display.set_mode((400,600))
-pygame.display.set_caption("asteroid")
+pygame.display.set---------------
 
 # Display game window 
 background_image = pygame.image.load("bg2.jpg").convert()
 screen.fill((0,0,0))
-screen.blit(background_image,[0,0])
+--------------------------
 
 
 #Creating Players 
-player=pygame.Rect(200,200,30,30)
+------------------------------
 player_image = pygame.image.load("player.png").convert_alpha()
 screen.blit(player_image , player)
 pygame.display.update()
@@ -42,13 +41,13 @@ while True:
       
     if event.type == pygame.KEYUP:
       if event.key ==pygame.K_LEFT or event.key == pygame.K_RIGHT:
-        change= 0
+        ---------------
       if event.key == pygame.K_UP:
         press=False
     
     if event.type == pygame.KEYDOWN:
       if event.key == pygame.K_LEFT:
-        change =300
+        ---------------
       if event.key ==pygame.K_RIGHT:
         change = -30
       if event.key == pygame.K_UP:
@@ -56,10 +55,10 @@ while True:
         
   angle += change
   angle=angle % 360
-  newimg=pygame.transform.rotate(player_image,angle)
+  -------------------------
 
  
-  screen.blit(newimg , player)
+  ------------------------
   
   
   pygame.display.update()
@@ -69,17 +68,3 @@ while True:
 
 
 
-#Game Loop
-'''while True:
-  
-  screen.blit(background_image,[0,0])
-  #event loop to check which key is print
-  for event in pygame.event.get():
-    if event.type == pygame.QUIT:
-      pygame.quit()
-      sys.exit()
-    if event.type == pygame.KEYUP:
-      if event.key ==pygame.K_LEFT or event.key == pygame.K_RIGHT:
-        change= 0
-      if event.key == pygame.K_UP:
-        press=False'''
