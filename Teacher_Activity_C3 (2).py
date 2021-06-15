@@ -26,10 +26,10 @@ player_image = pygame.image.load("s4.png").convert_alpha()
 screen.blit(player_image , player)
 pygame.display.update()
 
-playerSpeed=20
+
 angle=0
 change=0
-speed=5
+
 press=False
 
 while True:
@@ -69,17 +69,3 @@ while True:
 
 
 
-#Game Loop
-'''while True:
-  
-  screen.blit(background_image,[0,0])
-  #event loop to check which key is print
-  for event in pygame.event.get():
-    if event.type == pygame.QUIT:
-      pygame.quit()
-      sys.exit()
-    if event.type == pygame.KEYUP:
-      if event.key ==pygame.K_LEFT or event.key == pygame.K_RIGHT:
-        change= 0
-      if event.key == pygame.K_UP:
-        press=False'''
