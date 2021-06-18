@@ -45,8 +45,6 @@ while True:
         change =3
       if event.key ==pygame.K_RIGHT:
         change = -3
-      if event.key == pygame.K_UP:
-        press=True;   
         
   enemy.x=enemy.x + xvel
   enemy.y=enemy.y + yvel 
