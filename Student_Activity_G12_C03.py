@@ -29,7 +29,6 @@ yvel=3
 angle=0
 change=0
 
-
 while True:
   screen.blit(background_image,[0,0])
   for event in pygame.event.get():
@@ -49,8 +48,6 @@ while True:
       if event.key == pygame.K_UP:
         press=True;   
         
-   
-  
   enemy.x=enemy.x + xvel
   enemy.y=enemy.y + yvel 
   
