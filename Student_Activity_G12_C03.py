@@ -56,7 +56,7 @@ while True:
  
   angle += change
   
-  angle=angle % 360
+  
   
   newimage=pygame.transform.rotate(player_image,angle) 
   
