@@ -26,11 +26,8 @@ player_image = pygame.image.load("s4.png").convert_alpha()
 screen.blit(player_image , player)
 pygame.display.update()
 
-
 angle=0
 change=0
-
-press=False
 
 while True:
   screen.blit(background_image,[0,0])
@@ -43,25 +40,15 @@ while True:
     if event.type == pygame.KEYUP:
       if event.key ==pygame.K_LEFT or event.key == pygame.K_RIGHT:
         change= 0
-     
-    
+         
     if event.type == pygame.KEYDOWN:
       if event.key == pygame.K_LEFT:
-        change =30
-    
-        
+        change =3
+            
   angle += change
   angle=angle % 360
   newimg=pygame.transform.rotate(player_image,angle)
-
  
   screen.blit(newimg , player)
   
-  
   pygame.display.update()
-
-
-
-
-
-
