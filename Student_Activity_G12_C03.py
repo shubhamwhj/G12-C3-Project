@@ -38,8 +38,7 @@ while True:
     if event.type == pygame.KEYUP:
       if event.key ==pygame.K_LEFT or event.key == pygame.K_RIGHT:
         change= 0
-      if event.key == pygame.K_UP:
-        press=False  
+     
     if event.type == pygame.KEYDOWN:
       if event.key == pygame.K_LEFT:
         change =3
