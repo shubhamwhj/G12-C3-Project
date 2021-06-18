@@ -46,7 +46,7 @@ while True:
         change =3
             
   angle += change
-  angle=angle % 360
+  
   newimg=pygame.transform.rotate(player_image,angle)
  
   screen.blit(newimg , player)
