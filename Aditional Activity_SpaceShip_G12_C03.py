@@ -1,13 +1,5 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Tue Jun 15 15:36:00 2021
-
-@author: dell
-"""
 
 import pygame, random, sys
-
-
 pygame.init()
 clock=pygame.time.Clock()
 screen = pygame.display.set_mode((400,600))
@@ -28,32 +20,24 @@ yvel=3
 
 angle=0
 change=0
-
-
 while True:
   screen.blit(background_image,[0,0])
   for event in pygame.event.get():
     if event.type == pygame.QUIT:
       pygame.quit()
-      
+    
     if event.type == pygame.KEYUP:
         
       if  event.key == pygame.K_UP or event.key==pygame.K_DOWN :
-        
-          change= 0
-        
-   
+              change= 0
+          
     if event.type == pygame.KEYDOWN:
-              
+         
       if event.key == pygame.K_UP:
         change=3
       if event.key==pygame.K_DOWN:
           change=-3
      
-      
-        
-   
-  
   enemy.x=enemy.x + xvel
   enemy.y=enemy.y + yvel 
   
@@ -64,8 +48,7 @@ while True:
     yvel = -1*yvel
  
   angle += change
-  
-   
+     
   newimage=pygame.transform.rotate(player_image,angle) 
   
   screen.blit(newimage ,player)
