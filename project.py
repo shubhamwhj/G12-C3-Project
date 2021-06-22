@@ -29,14 +29,14 @@ pygame.display.update()
 
 
 angle=0
-change=0
+speed=0
 
 
 
 while True:
   screen.blit(background_image,[0,0])
   screen.blit(arrow_key,[180,120])
-  #angle=angle+change
+  
   for event in pygame.event.get():
     if event.type == pygame.QUIT:
       pygame.quit()
@@ -48,9 +48,9 @@ while True:
     if event.type == pygame.KEYDOWN:
               
       if event.key == pygame.K_LEFT:
-        change=3
+        speed=3
       if event.key==pygame.K_RIGHT:
-          change=-3
+          speed=-3
    
   
   angle += change
